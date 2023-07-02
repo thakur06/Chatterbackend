@@ -1,5 +1,6 @@
 const express= require('express');
 const cors= require('cors');
+const DB= require('./Auth/DB');
 const EventEmitter = require('events');
 
 const ChatRoute= require('./Routes/ChatRoutes');
@@ -11,6 +12,7 @@ const app = express();
 eventEmitter.setMaxListeners(20);
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
+DB();
 
 app.use("/chat",ChatRoute);
 const port = 4000
