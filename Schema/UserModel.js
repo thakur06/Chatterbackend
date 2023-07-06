@@ -3,10 +3,10 @@ const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema(
   {
-    email:{
-type: String,
-required: true,
-unique: true,
+    email: {
+      type: String,
+      required: true,
+      unique: true,
     },
     username: {
       type: String,
@@ -30,7 +30,7 @@ unique: true,
       type: Boolean,
       default: false,
     },
-   profilePicture: String,
+    profilePicture: String,
     coverPicture: String,
     about: String,
     livesIn: String,
